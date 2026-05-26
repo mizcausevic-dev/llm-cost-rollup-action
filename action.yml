@@ -1,0 +1,38 @@
+name: "LLM Cost Rollup"
+description: "Read OTel GenAI cost-annotated spans from a workflow artifact, aggregate by (date, provider, model), and post a Markdown summary as a PR comment. Optionally fails the run when total spend exceeds a budget."
+author: "mizcausevic-dev"
+branding:
+  icon: "dollar-sign"
+  color: "blue"
+
+inputs:
+  input:
+    description: "Path to the OTLP/JSON file containing cost-annotated GenAI spans."
+    required: true
+  bucket:
+    description: "Group rows by 'day', 'month', or 'all'. Default 'day'."
+    required: false
+    default: "day"
+  comment-on-pr:
+    description: "Post the Markdown table as a PR comment. Defaults to 'true' when this run is in a pull_request event."
+    required: false
+    default: "auto"
+  fail-over-usd:
+    description: "Optional spending ceiling in USD. When set, the action fails if total cost > this value."
+    required: false
+  github-token:
+    description: "Token used to post the PR comment (defaults to GITHUB_TOKEN)."
+    required: false
+    default: ${{ github.token }}
+
+outputs:
+  total-cost-usd:
+    description: "Total accumulated spend across the rollup, as a number string."
+  spans:
+    description: "Number of spans processed."
+  rows:
+    description: "JSON array of rollup rows."
+
+runs:
+  using: "node20"
+  main: "dist/index.js"

@@ -1,0 +1,46 @@
+{
+  "name": "llm-cost-rollup-action",
+  "version": "0.1.0",
+  "description": "GitHub Action that reads OTel GenAI cost-annotated spans from a workflow artifact, aggregates spend by (date, provider, model), and posts a Markdown summary as a PR comment. Optionally fails the run when total spend exceeds a USD budget. Composes with otel-genai-rollup and llm-cost-budget-operator.",
+  "type": "module",
+  "private": true,
+  "license": "AGPL-3.0-or-later",
+  "author": "mizcausevic-dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mizcausevic-dev/llm-cost-rollup-action"
+  },
+  "keywords": [
+    "github-action",
+    "actions",
+    "opentelemetry",
+    "otel",
+    "genai",
+    "llm",
+    "finops",
+    "cost",
+    "ci",
+    "typescript"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "coverage": "vitest run --coverage",
+    "demo": "tsx scripts/demo.ts"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "@types/node": "^22.10.0",
+    "@vitest/coverage-v8": "^2.1.8",
+    "eslint": "^9.17.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.18.0",
+    "vitest": "^2.1.8"
+  }
+}

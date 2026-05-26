@@ -1,0 +1,36 @@
+{
+  "resourceSpans": [
+    {
+      "scopeSpans": [
+        {
+          "spans": [
+            {
+              "name": "chat gpt-4o-mini",
+              "kind": 3,
+              "startTimeUnixNano": "1747958400000000000",
+              "attributes": [
+                { "key": "gen_ai.provider.name", "value": { "stringValue": "openai" } },
+                { "key": "gen_ai.request.model", "value": { "stringValue": "gpt-4o-mini" } },
+                { "key": "gen_ai.usage.input_tokens", "value": { "intValue": "812" } },
+                { "key": "gen_ai.usage.output_tokens", "value": { "intValue": "146" } },
+                { "key": "gen_ai.usage.cost", "value": { "doubleValue": 0.00211 } }
+              ]
+            },
+            {
+              "name": "chat claude-opus-4-7",
+              "kind": 3,
+              "startTimeUnixNano": "1747965500000000000",
+              "attributes": [
+                { "key": "gen_ai.provider.name", "value": { "stringValue": "anthropic" } },
+                { "key": "gen_ai.request.model", "value": { "stringValue": "claude-opus-4-7" } },
+                { "key": "gen_ai.usage.input_tokens", "value": { "intValue": "2500" } },
+                { "key": "gen_ai.usage.output_tokens", "value": { "intValue": "400" } },
+                { "key": "gen_ai.usage.cost", "value": { "doubleValue": 0.0675 } }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

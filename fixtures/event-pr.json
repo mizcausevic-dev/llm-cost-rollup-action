@@ -1,0 +1,4 @@
+{
+  "number": 42,
+  "pull_request": { "number": 42, "title": "feat: nightly LLM run", "user": { "login": "miz" } }
+}
