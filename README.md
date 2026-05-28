@@ -78,3 +78,7 @@ The action's runtime entry is `dist/index.js` — built artifacts are committed 
 ## License
 
 [AGPL-3.0-or-later](LICENSE)
+
+## Part of the Kinetic Gain Suite
+
+Operator surface in the [Kinetic Gain Suite](https://suite.kineticgain.com/) — a portfolio of buyer-readable control planes spanning security posture, compliance evidence, data-platform governance, FinOps, and operator workflows. See the suite index for related surfaces. Apex: [kineticgain.com](https://kineticgain.com/).
